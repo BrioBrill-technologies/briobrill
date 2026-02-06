@@ -1,5 +1,4 @@
 import './App.css';
-import logo from './logo.png';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -7,70 +6,161 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className="App">
-      <header className={`App-header ${scrolled ? 'scrolled' : ''}`}>
+      <header className={`header ${scrolled ? 'scrolled' : ''}`}>
         <nav className="navbar">
-          <img src={logo} className={`logo ${scrolled ? 'logo-scrolled' : ''}`} alt="Briobrill Logo" />
-          <h1 className={`company-name ${scrolled ? 'hide-company-name' : ''}`}>Briobrill Technologies</h1>
-          <ul className="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          <button className="get-started-btn">Get Started</button>
         </nav>
-        <div className="hero-section">
-          <h2 className="hero-title">Your Partner in Digital Transformation</h2>
-          <p className="hero-subtitle">Expertise in Web Development, App Development, and No-Code Solutions</p>
-          <a href="#services" className="cta-button">Explore Services</a>
-        </div>
       </header>
 
-      <section id="services" className="services-section">
-        <h2>Our Services</h2>
-        <div className="services-container">
-          <div className="service-card">
-            <h3>Web Development</h3>
-            <p>Building scalable and secure web applications tailored to your business needs.</p>
+      <main>
+        {/* HERO SECTION */}
+        <section className="hero">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              <span className="strike-pink">BRIO BRILL</span>
+            </h1>
+            <p className="hero-subtitle">Design craftsmanship for the modern era.</p>
+            <div className="hero-annotation">
+              <span className="handwriting">Thoughtful ideas. Precise craft. Modern execution.</span>
+            </div>
           </div>
-          <div className="service-card">
-            <h3>App Development</h3>
-            <p>Creating intuitive mobile apps for both iOS and Android platforms.</p>
+        </section>
+
+        {/* SERVICES SECTION */}
+        <section id="services" className="services">
+          <h2 className="section-title">Take a PEEK <i>at</i> OUR SERVICES</h2>
+
+          <div className="folder-stack-container">
+            <div className="folder-annotation">
+              <span className="handwriting pink">Let's dive right into it</span>
+              <div className="arrow-down"></div>
+            </div>
+
+            <div className="folder-stack">
+              <div className="folder folder-1" data-tab="DESIGN">
+                <div className="folder-tab">DESIGN</div>
+              </div>
+              <div className="folder folder-2" data-tab="DEVELOPMENT">
+                <div className="folder-tab">DEVELOPMENT</div>
+              </div>
+              <div className="folder folder-3" data-tab="CONSULTATIONS">
+                <div className="folder-tab">CONSULTATIONS</div>
+              </div>
+              <div className="folder folder-4" data-tab="REBRANDING">
+                <div className="folder-tab">REBRANDING</div>
+              </div>
+              <div className="folder folder-main">
+                <div className="folder-front">
+                  <div className="folder-seal"></div>
+                  <div className="folder-label">WHAT WE OFFER</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="service-card">
-            <h3>No-Code Solutions</h3>
-            <p>Empowering your business with custom solutions using no-code platforms.</p>
+        </section>
+
+        {/* MARQUEE */}
+        <div className="marquee">
+          <div className="marquee-content">
+            <span>BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill </span>
           </div>
         </div>
-      </section>
 
-      <section id="about" className="about-section">
-        <h2>About Us</h2>
-        <p>Briobrill Technologies is dedicated to helping businesses innovate with cutting-edge technology. We offer customized solutions in web development, app development, and no-code platforms to ensure your business stays ahead in a competitive market.</p>
-      </section>
+        {/* METHODOLOGY SECTION */}
+        <section className="methodology">
+          <div className="post-it-grid">
+            <div className="post-it post-blue execution">
+              <div className="tape"></div>
+              <h3>EXECUTION</h3>
+              <p>Perfect development, marketing and everything related to your business to yield global presence.</p>
+            </div>
 
-      <section id="contact" className="contact-section">
-        <h2>Contact Us</h2>
-        <p>Email us at: <a href="mailto:info@briobrill.com">info@briobrill.com</a></p>
-        <p>Phone: +91 9481509568</p>
-      </section>
+            <div className="post-it post-green perspective">
+              <div className="tape"></div>
+              <h3>PERSPECTIVE</h3>
+              <p>Bringing a creative edge to design while keeping it simple and user friendly.</p>
+            </div>
+
+            <div className="post-it post-pink voice">
+              <div className="tape"></div>
+              <h3>VOICE</h3>
+              <p>Giving a brand the right tone for communication to connect with its audiences effectively.</p>
+            </div>
+
+            <div className="post-it post-purple integration">
+              <div className="tape"></div>
+              <h3>INTEGRATION</h3>
+              <p>Integrating various technologies to build a seamless experience for your users.</p>
+            </div>
+
+            <div className="post-it post-yellow positioning">
+              <div className="tape"></div>
+              <h3>POSITIONING</h3>
+              <p>Creating a unique identity for your brand to stand out in the crowded market.</p>
+            </div>
+
+            <div className="crossword-art">
+              {/* This would ideally be a grid or an image */}
+              <div className="crossword-grid"></div>
+            </div>
+          </div>
+        </section>
+
+        {/* MARQUEE REPEAT */}
+        <div className="marquee">
+          <div className="marquee-content">
+            <span>BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill — BrioBrill </span>
+          </div>
+        </div>
+
+        {/* PORTFOLIO SECTION */}
+        <section className="portfolio">
+          <div className="portfolio-grid">
+            <div className="portfolio-card intro-card">
+              <img src="/retro-mac.png" alt="Retro Mac" className="retro-img" />
+              <p>We are, <br /><strong>Briobrilliants</strong></p>
+            </div>
+
+            <div className="portfolio-card title-card">
+              <h2>PORTFOLIO</h2>
+            </div>
+
+            <div className="portfolio-card toaster-card">
+              <img src="/toaster.png" alt="Toaster" className="toaster-img" />
+            </div>
+
+            <div className="stats-box green">
+              <span className="stat-number">251</span>
+              <span className="stat-label">PROJECTS</span>
+            </div>
+
+            <div className="stats-box purple">
+              <span className="stat-number">156</span>
+              <span className="stat-label">AWARDS</span>
+            </div>
+
+            <div className="stats-box pink client-card">
+              <span className="stat-label">CLIENTS</span>
+            </div>
+
+            <div className="stats-box blue tech-card">
+              <span className="stat-number">172</span>
+              <span className="stat-label">TECHNOLOGIES</span>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer className="footer">
-        <p>&copy; 2024 Briobrill Technologies. All rights reserved.</p>
+        <p>&copy; 2024 Briobrill Technologies. Crafted with care.</p>
       </footer>
     </div>
   );

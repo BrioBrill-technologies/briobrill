@@ -1,13 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono:wght@400;700&family=Gochi+Hand&family=Outfit:wght@500;800&display=swap');
+
+:root {
+  --primary: #aff75d;
+  --pastel-pink: #fbcfe8;
+  --pastel-blue: #bfdbfe;
+  --pastel-green: #bbf7d0;
+  --pastel-yellow: #fef08a;
+  --pastel-purple: #e9d5ff;
+  --grid-color: rgba(0, 0, 0, 0.2);
+  --text-dark: #111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-dark);
+  background-color: #fff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Space Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
