@@ -36,12 +36,20 @@ function App() {
 
         {/* SERVICES SECTION */}
         <section id="services" className="services">
-          <h2 className="section-title">Take a PEEK <i>at</i> OUR SERVICES</h2>
+          <h2 className="section-title">Take a PEEK <i>at</i> <br />OUR SERVICES</h2>
 
           <div className="folder-stack-container">
             <div className="folder-annotation">
-              <span className="handwriting pink">Let's dive right into it</span>
-              <div className="arrow-down"></div>
+              <span className="handwriting pink">Let's dive <br /> right into it</span>
+              <img src="/Arrow.png" alt="arr" className="arrow-img" />
+            </div>
+
+            <div className="note-paper">
+              <p>We design, develop, and <br />think.</p>
+              <p>A small craft bureau, taking <br />time with ideas</p>
+              <p>and care with how things are <br />made.</p>
+              <p>We believe in quiet clarity <br />over noise,</p>
+              <p>in showing up fully for the <br />work.</p>
             </div>
 
             <div className="folder-stack">
@@ -58,9 +66,10 @@ function App() {
                 <div className="folder-tab">REBRANDING</div>
               </div>
               <div className="folder folder-main">
+                <div className="folder-tab">VISUAL CRAFT</div>
                 <div className="folder-front">
-                  <div className="folder-seal"></div>
-                  <div className="folder-label">WHAT WE OFFER</div>
+                  <div className="protruding-card"></div>
+                  <img src="/seal.png" alt="Seal" className="folder-seal-img" />
                 </div>
               </div>
             </div>
@@ -76,40 +85,40 @@ function App() {
 
         {/* METHODOLOGY SECTION */}
         <section className="methodology">
-          <div className="post-it-grid">
+          <div className="methodology-container">
+            <div className="crossword-center">
+              <img src="/Crossword.png" alt="Crossword" className="crossword-img" />
+            </div>
+
             <div className="post-it post-blue execution">
               <div className="tape"></div>
               <h3>EXECUTION</h3>
-              <p>Perfect development, marketing and everything related to your business to yield global presence.</p>
+              <p>Design, development, marketing, <br />and brand building come together <br />as one disciplined practice.</p>
             </div>
 
             <div className="post-it post-green perspective">
               <div className="tape"></div>
               <h3>PERSPECTIVE</h3>
-              <p>Bringing a creative edge to design while keeping it simple and user friendly.</p>
+              <p>Every decision is made <span className="highlight">holistically</span>, <br />with the full system in mind.</p>
             </div>
 
             <div className="post-it post-pink voice">
               <div className="tape"></div>
               <h3>VOICE</h3>
-              <p>Giving a brand the right tone for communication to connect with its audiences effectively.</p>
+              <p>We build work that <span className="highlight">speaks the <br />language</span> of the individual or brand <br />we partner with.</p>
             </div>
 
             <div className="post-it post-purple integration">
               <div className="tape"></div>
               <h3>INTEGRATION</h3>
-              <p>Integrating various technologies to build a seamless experience for your users.</p>
+              <p><span className="highlight">We work end to end</span>, from design <br />through development, without silos <br />or hand-offs.</p>
             </div>
 
             <div className="post-it post-yellow positioning">
               <div className="tape"></div>
               <h3>POSITIONING</h3>
-              <p>Creating a unique identity for your brand to stand out in the crowded market.</p>
-            </div>
-
-            <div className="crossword-art">
-              {/* This would ideally be a grid or an image */}
-              <div className="crossword-grid"></div>
+              <p>BrioBrill is not an agency or a <br />studio.</p>
+              <p>We operate as a <span className="highlight">craft bureau.</span></p>
             </div>
           </div>
         </section>
@@ -153,7 +162,7 @@ function App() {
 
             <div className="stats-box blue tech-card">
               <span className="stat-number">172</span>
-              <span className="stat-label">TECHNOLOGIES</span>
+              <span className="stat-label">RECOGNITIONS</span>
             </div>
           </div>
         </section>
